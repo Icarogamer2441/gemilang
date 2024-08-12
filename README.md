@@ -6,6 +6,10 @@ custom programming language interpreter that is interpreted by google's gemini A
 
 first run:
 ```console
+$ pip install -U google-generativeai
+```
+after, run this:
+```console
 $ python gemilang.py
 ```
 
