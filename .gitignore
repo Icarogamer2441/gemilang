@@ -1,0 +1,4 @@
+gemilanga.py
+build/
+dist/
+*.spec

@@ -1,0 +1,46 @@
+<?mylang
+use std::err;
+use std::list;
+
+type enum {
+    T_int,
+    T_float,
+    T_string,
+} Tokentype;
+
+list::func tokenize(string code) {
+    list::var tokens = [];
+    int pos = 0;
+    while (pos < code.len) {
+        token = code[pos];
+	pos++;
+	if (token.isint()) {
+	    fnl = "";
+	    while (token.isint() or token == ".") {
+	        fnl += token;
+
+		token = code[pos]
+		pos++;
+	    }
+	    if (fnl.isint()) {
+	        tokens.apnd([Tokentype::T_int, toint(fnl)]);
+	    } elif (fnl.isfloat()) {
+	      	tokens.apnd([Tokentype::T_float, tofloat(fnl)]);
+	    } else {
+	        err:Error("error in " + this.func.name, "!\n");
+	    }
+	}
+    }
+
+    return tokens;
+}
+
+int main() {
+    list::var tokens = tokenize("10 20.5 30.609");
+    foreach (tokens as token) {
+        println("Token -> ", token);
+    }
+
+    return 0;
+}
+?end>
