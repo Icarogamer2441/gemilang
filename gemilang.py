@@ -12,7 +12,7 @@ def clear_screen():
     else:
         os.system('clear')
 
-API = "YOUR GEMINI API"
+API = input("Your gemini api key: ")
 genai.configure(api_key=API)
 
 model = genai.GenerativeModel("gemini-pro")
